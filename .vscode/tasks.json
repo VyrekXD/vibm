@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "push:fix",
+			"problemMatcher": [],
+			"label": "npm: push.fix",
+			"detail": "git add . && git commit -m \"🛠 Fix\" && git push origin main"
+		}
+	]
+}
+

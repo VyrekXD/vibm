@@ -1,0 +1,30 @@
+{
+	"name": "vibm",
+	"version": "0.0.1-alpha",
+	"description": "Vyrek Interface Bot Maker",
+	"main": "build/index.js",
+	"type": "module",
+	"scripts": {
+		"test": "tsc && node --experimental-json-modules .",
+		"test:debug": "tsc && node --experimental-json-modules . DEBUG=true",
+		"push:fix": "git add . && git commit -m \"🛠 Fix\" && git push origin main",
+		"build": "tsc",
+		"start": "node --experimental-json-modules ."
+	},
+	"keywords": [],
+	"author": "Vyrek",
+	"license": "Apache-2.0",
+	"dependencies": {
+		"boxen": "^6.2.1",
+		"chalk": "^5.0.1",
+		"log-update": "^5.0.0",
+		"ora": "^6.1.0",
+		"prompts": "^2.4.2",
+		"simple-git": "^3.5.0"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.23",
+		"@types/prompts": "^2.0.14"
+	}
+}
+
