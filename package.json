@@ -5,8 +5,7 @@
 	"main": "build/index.js",
 	"type": "module",
 	"scripts": {
-		"test": "tsc && node --experimental-json-modules .",
-		"test:debug": "tsc && node --experimental-json-modules . DEBUG=true",
+		"test": "swc ./src -d build && node --experimental-json-modules . DEBUG=true",
 		"push:fix": "git add . && git commit -m \"🛠 Fix\" && git push origin main",
 		"build": "tsc",
 		"start": "node --experimental-json-modules ."
@@ -17,12 +16,19 @@
 	"dependencies": {
 		"boxen": "^6.2.1",
 		"chalk": "^5.0.1",
+		"kufa": "^1.6.5",
 		"log-update": "^5.0.0",
 		"ora": "^6.1.0",
 		"prompts": "^2.4.2",
-		"simple-git": "^3.5.0"
+		"simple-git": "^3.5.0",
+		"socket.io": "^4.5.1",
+		"socket.io-client": "^4.5.1",
+		"websocket": "^1.0.34",
+		"ws": "^8.6.0"
 	},
 	"devDependencies": {
+		"@swc/cli": "^0.1.57",
+		"@swc/core": "^1.2.187",
 		"@types/node": "^17.0.23",
 		"@types/prompts": "^2.0.14"
 	}
